@@ -1,0 +1,102 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="author" content="Fabio Neri">
+        <title> EXERCICIOS DE JAVASCRIPT IDADE ALTURA SEXO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet " type="text/css " href="css/style.css " />
+    <style type="text/css">
+
+body {
+   text-align: center
+}
+
+.bt-container { 
+   text-align: center 
+ }
+.text-white,
+.text-white-houve:hover,
+
+.bt {
+  color: #000000 !important;
+}
+.shadow-1,
+.bt,
+.container {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.shadow-2,
+.bt:hover,
+.context_menu_pai,
+.box_login,
+.datepicker.dropdown-menu,
+.dialogbox,
+.overflow-menu ul {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.transition-1,
+.bt {
+  transition: all .3s ease-out;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.bt {
+  border: 0;
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+body {
+   text-align: center
+}
+</style>    
+</head>
+<body>
+    <script>
+        var i, idade, altura, sexo, quanthom = 0, quantmulh = 0, maior = 0, menor = 0, maioraltura = 0, sexomaioraltura, contpessoa;
+        cont = parseInt(prompt("Quantas Pessoas Avaliaremos?"));
+        for(i = 1; i <= cont; i++) {
+            idade = parseInt(prompt("Qual idade da "+i+"ª pessoa: "));
+            altura = parseFloat(prompt("Qual altura da "+i+"ª pessoa (Digite com . para separar casas decimais): "));
+            sexo = prompt("Qual sexo da "+i+"ª pessoa (Digite como [M] ou [F]): ");
+            if(sexo == 'M')
+            {
+                quanthom++;
+            }
+            if (sexo == 'F')
+            {
+                quantmulh++;
+            }
+            if(idade >= 18)
+            {
+                maior++;
+            }
+            if (idade < 18)
+            {
+                menor++;
+            }
+            if (altura>maioraltura)
+            {
+                maioraltura=altura;
+                sexomaioraltura=sexo;
+                contpessoa=i;
+            }
+        }
+        document.write("RESULTADOS<br>");
+        document.write("<br>");
+        document.write("TOTAL HOMENS: "+quanthom+"<br>");
+        document.write("TOTAL MULHERES: "+quantmulh+"<br>");
+        document.write("MAIOR ALTURA: "+maioraltura+"<br>");
+        document.write("SEXO MAIOR ALTURA: "+sexomaioraltura+" que é a "+contpessoa+"ª digitada <br>");
+        document.write("MAIORES 18 ANOS: "+maior+"<br>");
+        document.write("MENORES 18 ANOS: "+menor+"<br>");
+    </script>
+</body>
+</html>

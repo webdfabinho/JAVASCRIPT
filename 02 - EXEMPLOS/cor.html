@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="author" content="Fabio Neri">
+		<title> EXERCICIOS DE JAVASCRIPT COR</title>
+		<link rel="stylesheet " type="text/css " href="css/style.css " />
+<style type="text/css">
+
+body {
+   text-align: center
+}
+
+.bt-container { 
+   text-align: center 
+ }
+.text-white,
+.text-white-houve:hover,
+
+.button {
+  background-color: #A9A9A9; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+</style>
+
+	<script language="javascript" type="text/javascript">
+		function trocarcor(id) {
+		if (id == "vermelho") { document.getElementsByTagName("body")[0].style.background = "red" }
+		else if(id == "azul"){ document.getElementsByTagName("body")[0].style.background = "blue"}
+		else if(id == "verde"){  document.getElementsByTagName("body")[0].style.background = "green"}
+		else if(id == "amarelo"){  document.getElementsByTagName("body")[0].style.background = "yellow"}
+
+		console.log(id)}
+	</script>
+	</head>
+
+<body>
+	
+		<div class="bt.container">
+		<main>
+		<h2 style="text-align:center"> CLIQUE EM UM DOS BOTÕES ABAIXO <br> PARA MUDAR O BACKGROUND DA PÁGINA. </h2>
+		
+		   <button style="align-items: center;" class="button" id="azul" onclick="trocarcor(id)"> Azul </button>
+		   <button style="align-items: center;" class="button" id="verde" onclick="trocarcor(id)"> Verde </button>
+		   <button style="align-items: center;" class="button" id="vermelho" onclick="trocarcor(id)"> Vermelho </button>
+		   <button style="align-items: center;" class="button" id="amarelo" onclick="trocarcor(id)"> Amarelo </button>
+		   
+		</main>
+		<br><br>
+		<a href="index.html"><input class="button" type="button" value="Voltar"></a>
+		</div>
+	
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="author" content="Fabio Neri">
+		<title> EXERCICIOS DE JAVASCRIPT DATA</title>
+		<link rel="stylesheet " type="text/css " href="css/style.css " />
+
+<style type="text/css">
+
+body {
+   text-align: center
+}
+
+.bt-container { 
+   text-align: center 
+ }
+.text-white,
+.text-white-houve:hover,
+
+.button {
+  background-color: #A9A9A9; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+</style>
+
+
+    <script language="javascript" type="text/javascript">
+
+        function mesDigitado(mes) {
+            switch (mes) {
+                case 1:
+                    return ("Janeiro");
+                    break;
+                case 2:
+                    return ("Fevereiro");
+                    break;
+                case 3:
+                    return ("Março");
+                    break;
+                case 4:
+                    return ("Abril");
+                    break;
+                case 5:
+                    return ("Maio");
+                    break;
+                case 6:
+                    return ("Junho");
+                    break;
+                case 7:
+                    return ("Julho");
+                    break;
+                case 8:
+                    return ("Agosto");
+                    break;
+                case 9:
+                    return ("Setembro");
+                    break;
+                case 10:
+                    return ("Outubro");
+                    break;
+                case 11:
+                    return ("Novembro");
+                    break;
+                case 12:
+                    return ("Dezembro");
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        var data = prompt("Informe a Data no Formato dd/MM/aaaa");
+        var dataFormatada = Date(data);
+        var separador = data.split("/");
+        alert("--- Data Formatada ---\n" + separador[0] + " de " + mesDigitado(parseInt(separador[1])) + " de " + separador[2]);
+        document.write( " A DATA DIGITADA FOI: <br>" + separador[0] + " de " + mesDigitado(parseInt(separador[1])) + " de " + separador[2]);
+    </script>
+
+</head>
+
+<body>
+    <fieldset>
+	<br><br>
+        <a href="index.html"><input class="button" type="button" value="Voltar"></a>
+    </fieldset>
+</body>
+
+	</html>

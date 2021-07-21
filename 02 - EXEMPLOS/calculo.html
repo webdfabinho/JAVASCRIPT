@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="author" content="Fabio Neri">
+      <title> EXERCICIOS DE JAVASCRIPT CALCULO </title>
+      <link rel="stylesheet " type="text/css " href="css/style.css " />
+<style type="text/css">
+
+body {
+   text-align: center
+}
+
+.bt-container { 
+   text-align: center 
+ }
+.text-white,
+.text-white-houve:hover,
+
+.button {
+  background-color: #A9A9A9; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+</style>
+
+
+<script type="text/javascript">
+<!--
+/* ConteÃºdo do JavaScript */
+function calcular(oper) {
+   var valor1 = document.calcform.valor1.value;
+   var valor2 = document.calcform.valor2.value;
+   var valor3 = document.calcform.valor3.value;
+
+   var max = Math.max(valor1, valor2, valor3);
+   var min = Math.min(valor1, valor2, valor3);
+
+   var pre = document.body.appendChild(document.createElement('pre'));
+   pre.textContent = 'dos valores ' + valor1 + ', ' + valor2 + ' e ' + valor3;
+   pre.textContent += ' o maior é ' + max + ' e o menor é ' + min;
+
+   if (oper == "somar") {
+      var res = parseInt(valor1) + parseInt(valor2) + parseInt(valor3);
+   } else {
+      if (oper == "subtrair") {
+         var res = valor1-valor2-valor3;
+      } else {
+         if (oper == "produto") {
+            var res = (parseInt(valor1) + parseInt(valor2) + parseInt(valor3)%3);
+         } else {
+            if (oper = "media"){
+            var res = (parseInt(valor1) + parseInt(valor2) + parseInt(valor3))/3;
+             } else {
+               var res = valor1/valor2/valor3;
+         }
+      }
+   }
+}
+   document.calcform.res.value = res;
+}
+
+</script>
+
+</head>
+<body>
+
+
+<form name="calcform" method="post" action="">
+   <fieldset>
+      <p>DIGITE ABAIXO 3 NÚMEROS E SELECIONE O TIPO DE OPERAÇÃO</p>
+      <label for="valor1">Digite o valor <strong>1</strong>:</label> 
+      <input type="text" name="valor1" id="valor1" />
+      <br><br>
+      <label for="valor2">Digite o valor <strong>2</strong>:</label> 
+      <input type="text" name="valor2" id="valor2" />
+      <br><br>
+      <label for="valor3">Digite o valor <strong>3</strong>:</label> 
+      <input type="text" name="valor3" id="valor3" />
+      <br><br>
+      <label for="oper">Selecione a Operação:</label>
+      <select name="oper" id="oper">
+         <option value="somar">Somar</option>
+         <option value="produto">Produto</option>
+         <option value="media">Média</option><br>
+      </select>
+      <br><br>
+      <label for="res">Resultado:</label>
+      <input type="text" name="res" id="res" />
+
+      <input type="button" value="Calcular" class="button" onclick="calcular(document.calcform.oper.value)"/>
+      <br><br>
+       <a href="index.html"><input class="button" type="button" value="Voltar"></a>
+   </fieldset>
+</form>
+
+</body>
+</html>

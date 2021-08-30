@@ -1,0 +1,26 @@
+<!DOCTYPE lang="pt-br">
+<html>
+    <head>
+        <title>Minha Página</title>
+        <meta charset="utf=8">
+        <script type="text/javascript" src="js/main.js"></script> 
+        <!-- <script language=javascript type="text/javascript">
+            dayName = new Array ("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado")
+            monName = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Agosto", "Outubro", "Novembro", "Dezembro")
+            now = new Date
+            </script> -->
+            </head>
+            <body>
+         <!--   <script language=javascript type="text/javascript">
+            document.write ("<h1> Hoje é " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ]   +  " de "  +     now.getFullYear () + ". </h1>")
+            </script> -->
+    <body onload="load()">
+        <h1>Pagina com exemplos de JS - Fabio Neri</h1>
+        <button type="button" onclick="clicou()">Clique Aqui</button>
+        <p id="agradecimento" onclick="redirecionar()">Redirecionar</p>
+        <p id="mousemove" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o Mouse</p>
+        <p id="mousemove2" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o Mouse</p>
+        <p id="mousemove3" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o Mouse</p>
+        
+    </body>
+</html>

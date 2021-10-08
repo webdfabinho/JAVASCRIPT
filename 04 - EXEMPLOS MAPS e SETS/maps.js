@@ -34,3 +34,23 @@ console.log(getAdmins(userRoles));
 
 // solução 2
 
+function getAdmins(map) {
+    let admins = [];
+    for([key, value] of map){
+        if (value === 'Admin') {
+            admins.push(key)
+        }
+    }
+    return admins;
+}
+
+const usuarios = new Map();
+
+usuarios.set('Fabio','Admin');
+usuarios.set('Carol','Admin');
+usuarios.set('Gustavo','User');
+usuarios.set('Mayara','User');
+usuarios.set('Rebeca','User');
+
+console.log(getAdmins(usuarios));
+
